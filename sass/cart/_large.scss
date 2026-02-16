@@ -1,0 +1,12 @@
+// Cart Responsive - Large Screens
+@media (min-width: $large) {
+    .cart {
+        &__container {
+            max-width: 1400px;
+        }
+
+        &__summary {
+            top: 100px;
+        }
+    }
+}

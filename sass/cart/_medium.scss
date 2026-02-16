@@ -1,0 +1,13 @@
+// Cart Responsive - Medium Screens
+@media (min-width: $medium) {
+    .cart {
+        &__item {
+            &-quantity {
+                button {
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

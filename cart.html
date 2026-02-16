@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Shopping Cart - PitStop Arena | Review your F1 poster selections and complete your order">
+    <title>Shopping Cart | PitStop Arena</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/cart.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav__container">
+            <a href="index.html" class="nav__logo">
+                <i class="fas fa-flag-checkered"></i>
+                PitStop Arena
+            </a>
+
+            <ul class="nav__menu">
+                <li class="nav__menu-item"><a href="index.html#home">Home</a></li>
+                <li class="nav__menu-item"><a href="index.html#cars_id">Products</a></li>
+                <li class="nav__menu-item"><a href="index.html#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav__cart">
+                <a href="cart.html">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="nav__cart-count">0</span>
+                </a>
+            </div>
+
+            <button class="nav__toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <div class="cart__container">
+            <h1 class="cart__title">Shopping Cart</h1>
+
+            <div class="cart__content">
+                <!-- Cart Items -->
+                <div class="cart__items" id="cart-items">
+                    <!-- Items will be dynamically loaded here -->
+                </div>
+
+                <!-- Order Summary -->
+                <div class="cart__summary">
+                    <h2>Order Summary</h2>
+
+                    <div class="cart__summary-row">
+                        <span class="cart__summary-label">Subtotal:</span>
+                        <span class="cart__summary-value" id="cart-subtotal">$0.00</span>
+                    </div>
+
+                    <div class="cart__summary-row">
+                        <span class="cart__summary-label">Shipping:</span>
+                        <span class="cart__summary-value">FREE</span>
+                    </div>
+
+                    <div class="cart__summary-row cart__summary-row--total">
+                        <span class="cart__summary-label">Total:</span>
+                        <span class="cart__summary-value" id="cart-total">$0.00</span>
+                    </div>
+
+                    <div class="cart__actions">
+                        <button class="cart__actions-checkout"
+                            onclick="alert('Proceeding to checkout! This is a demo.')">
+                            Proceed to Checkout
+                        </button>
+                        <a href="index.html#cars_id" class="cart__actions-continue">
+                            Continue Shopping
+                        </a>
+                        <button class="cart__actions-clear" id="clear-cart">
+                            Clear Cart
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section">
+                    <h3>PitStop Arena</h3>
+                    <p>Explore our diverse collection of F1 posters, designed to match every style and passion for
+                        motorsport.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer__section">
+                    <h3>Quick Links</h3>
+                    <p><a href="index.html#home">Home</a></p>
+                    <p><a href="index.html#cars_id">Products</a></p>
+                    <p><a href="index.html#collections">Collections</a></p>
+                    <p><a href="index.html#contact">Contact</a></p>
+                </div>
+
+                <div class="footer__section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Racing Avenue, Motorsport City</p>
+                    <p><i class="fas fa-envelope"></i> <a
+                            href="mailto:contact@pitstoparena.com">contact@pitstoparena.com</a></p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+12123123123">+1 212 312 3123</a></p>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 PitStop Arena | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+
+</html>

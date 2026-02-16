@@ -1,0 +1,24 @@
+// Responsive Styles for Desktop (992px and up)
+@media (min-width: $large) {
+    .header {
+        height: 80vh;
+
+        &__content {
+            h1 {
+                font-size: 7rem;
+            }
+        }
+    }
+
+    .products {
+        &__grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    .collections {
+        &__card {
+            height: 450px;
+        }
+    }
+}

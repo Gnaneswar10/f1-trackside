@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="95" fill="#e10600" stroke="#000" stroke-width="3"/>
+    
+    <!-- Inner Circle -->
+    <circle cx="100" cy="100" r="80" fill="#1a1a1a"/>
+    
+    <!-- Checkered Flag Pattern -->
+    <g transform="translate(70, 85)">
+        <!-- Flag pole -->
+        <rect x="0" y="0" width="3" height="40" fill="#fff"/>
+        
+        <!-- Checkered squares -->
+        <rect x="3" y="0" width="8" height="8" fill="#fff"/>
+        <rect x="11" y="0" width="8" height="8" fill="#000"/>
+        <rect x="19" y="0" width="8" height="8" fill="#fff"/>
+        <rect x="27" y="0" width="8" height="8" fill="#000"/>
+        
+        <rect x="3" y="8" width="8" height="8" fill="#000"/>
+        <rect x="11" y="8" width="8" height="8" fill="#fff"/>
+        <rect x="19" y="8" width="8" height="8" fill="#000"/>
+        <rect x="27" y="8" width="8" height="8" fill="#fff"/>
+        
+        <rect x="3" y="16" width="8" height="8" fill="#fff"/>
+        <rect x="11" y="16" width="8" height="8" fill="#000"/>
+        <rect x="19" y="16" width="8" height="8" fill="#fff"/>
+        <rect x="27" y="16" width="8" height="8" fill="#000"/>
+    </g>
+    
+    <!-- Text -->
+    <text x="100" y="135" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#e10600" text-anchor="middle">PITSTOP</text>
+    <text x="100" y="155" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">ARENA</text>
+</svg>

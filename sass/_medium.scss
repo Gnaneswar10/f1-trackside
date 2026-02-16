@@ -1,0 +1,42 @@
+// Responsive Styles for Tablets (768px and up)
+@media (min-width: $medium) {
+    .header {
+        &__content {
+            h1 {
+                font-size: 6rem;
+            }
+
+            p {
+                font-size: 2.2rem;
+            }
+        }
+    }
+
+    .collections {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .products {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .features {
+        &__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .footer {
+        &__content {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    .cookie-banner {
+        padding: 2rem 4rem;
+    }
+}

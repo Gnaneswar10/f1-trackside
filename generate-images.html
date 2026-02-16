@@ -1,0 +1,139 @@
+<!-- Simple HTML file to generate placeholder images -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Placeholder Generator</title>
+</head>
+
+<body>
+    <h1>Placeholder Image Generator for PitStop Arena</h1>
+    <p>Save these canvases as the corresponding image files:</p>
+
+    <h2>Background Images</h2>
+    <canvas id="bg1" width="1920" height="1080"></canvas>
+    <br><small>Save as: background.jpg</small>
+
+    <canvas id="bg2" width="1920" height="1080"></canvas>
+    <br><small>Save as: background2.jpg</small>
+
+    <h2>Collection Headers</h2>
+    <canvas id="tracks" width="800" height="600"></canvas>
+    <br><small>Save as: tracks_top.jpg</small>
+
+    <canvas id="teams" width="800" height="600"></canvas>
+    <br><small>Save as: teams_top.jpg</small>
+
+    <canvas id="drivers" width="800" height="600"></canvas>
+    <br><small>Save as: drivers_top.jpg</small>
+
+    <h2>Product Images</h2>
+    <div id="products"></div>
+
+    <script>
+        // Background 1 - Dark with red gradient
+        const bg1 = document.getElementById('bg1');
+        const ctx1 = bg1.getContext('2d');
+        const grad1 = ctx1.createLinearGradient(0, 0, 1920, 1080);
+        grad1.addColorStop(0, '#1a1a1a');
+        grad1.addColorStop(1, '#e10600');
+        ctx1.fillStyle = grad1;
+        ctx1.fillRect(0, 0, 1920, 1080);
+        ctx1.fillStyle = '#ffffff';
+        ctx1.font = 'bold 120px Arial';
+        ctx1.textAlign = 'center';
+        ctx1.fillText('F1 RACING', 960, 540);
+
+        // Background 2 - Red to black
+        const bg2 = document.getElementById('bg2');
+        const ctx2 = bg2.getContext('2d');
+        const grad2 = ctx2.createLinearGradient(0, 0, 0, 1080);
+        grad2.addColorStop(0, '#e10600');
+        grad2.addColorStop(1, '#000000');
+        ctx2.fillStyle = grad2;
+        ctx2.fillRect(0, 0, 1920, 1080);
+        ctx2.fillStyle = '#ffffff';
+        ctx2.font = 'bold 120px Arial';
+        ctx2.textAlign = 'center';
+        ctx2.fillText('SPECIAL OFFER', 960, 540);
+
+        // Tracks
+        const tracks = document.getElementById('tracks');
+        const ctxTracks = tracks.getContext('2d');
+        ctxTracks.fillStyle = '#2d2d2d';
+        ctxTracks.fillRect(0, 0, 800, 600);
+        ctxTracks.fillStyle = '#e10600';
+        ctxTracks.font = 'bold 80px Arial';
+        ctxTracks.textAlign = 'center';
+        ctxTracks.fillText('TRACKS', 400, 300);
+
+        // Teams
+        const teams = document.getElementById('teams');
+        const ctxTeams = teams.getContext('2d');
+        ctxTeams.fillStyle = '#1a1a1a';
+        ctxTeams.fillRect(0, 0, 800, 600);
+        ctxTeams.fillStyle = '#ffffff';
+        ctxTeams.font = 'bold 80px Arial';
+        ctxTeams.textAlign = 'center';
+        ctxTeams.fillText('TEAMS', 400, 300);
+
+        // Drivers
+        const driversCanvas = document.getElementById('drivers');
+        const ctxDrivers = driversCanvas.getContext('2d');
+        const gradDrivers = ctxDrivers.createRadialGradient(400, 300, 50, 400, 300, 400);
+        gradDrivers.addColorStop(0, '#e10600');
+        gradDrivers.addColorStop(1, '#000000');
+        ctxDrivers.fillStyle = gradDrivers;
+        ctxDrivers.fillRect(0, 0, 800, 600);
+        ctxDrivers.fillStyle = '#ffffff';
+        ctxDrivers.font = 'bold 80px Arial';
+        ctxDrivers.textAlign = 'center';
+        ctxDrivers.fillText('DRIVERS', 400, 300);
+
+        // Product images
+        const products = [
+            { name: 'hamilton1', color: '#00d2be', text: 'HAMILTON' },
+            { name: 'verstappen1', color: '#0600ef', text: 'VERSTAPPEN' },
+            { name: 'alonso1', color: '#0090ff', text: 'ALONSO' },
+            { name: 'senna1', color: '#00ff00', text: 'SENNA' },
+            { name: 'schumacher1', color: '#dc0000', text: 'SCHUMACHER' },
+            { name: 'russell1', color: '#00d2be', text: 'RUSSELL' },
+            { name: 'raikkonen1', color: '#dc0000', text: 'RÄIKKÖNEN' },
+            { name: 'vettel1', color: '#dc0000', text: 'VETTEL' },
+            { name: 'redbull1', color: '#0600ef', text: 'RED BULL' },
+            { name: 'ferrari1', color: '#dc0000', text: 'FERRARI' },
+            { name: 'mercedes1', color: '#00d2be', text: 'MERCEDES' },
+            { name: 'mclaren1', color: '#ff8700', text: 'MCLAREN' },
+            { name: 'alpine1', color: '#0090ff', text: 'ALPINE' },
+            { name: 'williams1', color: '#005aff', text: 'WILLIAMS' },
+            { name: 'monaco1', color: '#c62828', text: 'MONACO' },
+            { name: 'silverstone1', color: '#424242', text: 'SILVERSTONE' },
+            { name: 'spa1', color: '#e10600', text: 'SPA' }
+        ];
+
+        const container = document.getElementById('products');
+        products.forEach(prod => {
+            const canvas = document.createElement('canvas');
+            canvas.width = 600;
+            canvas.height = 800;
+            const ctx = canvas.getContext('2d');
+
+            ctx.fillStyle = prod.color;
+            ctx.fillRect(0, 0, 600, 800);
+
+            ctx.fillStyle = '#ffffff';
+            ctx.font = 'bold 60px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(prod.text, 300, 400);
+
+            const label = document.createElement('p');
+            label.textContent = `Save as: cars/${prod.name.includes('bull') || prod.name.includes('ferrari') || prod.name.includes('mercedes') || prod.name.includes('mclaren') || prod.name.includes('alpine') || prod.name.includes('williams') ? 'teams' : prod.name.includes('monaco') || prod.name.includes('silverstone') || prod.name.includes('spa') ? 'tracks' : 'drivers'}/${prod.name}.jpg`;
+
+            container.appendChild(canvas);
+            container.appendChild(label);
+            container.appendChild(document.createElement('br'));
+        });
+    </script>
+</body>
+
+</html>
